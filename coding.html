@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            QUESTIONS
+        </title>
+    </head>
+    <body>
+        <h3>leetcode question1 :Two sum</h3>
+        <p>Question:Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+            You may assume that each input would have exactly one solution, and you may not use the same element twice.
+             You can return the answer in any order.</p>
+        <p>Solution:
+            This can be solved by various method.
+            The first method which is called brute force method which can come to any coder's mind.
+            The main disadvantage of this method is that it can take high time complexity that is n to the power square.
+            Below is the code:<br>
+            package javaaplication;<br>
+            import java.util.Scanner;<br>
+            public class Javaaplication{<br>
+                Scanner sc=new Scanner(System.in);<br>
+                int n=sc.nextInt();<br>
+                int sum=sc.nextInt();<br>
+                int nums[]=new int[n]<br>
+                int ans=0;
+                for(int i=0;i<n;i++)<br>
+                {<br>
+                    nums[i]=sc.nextInt();<br>
+                }<br>
+                for(int i=0;i<n;i++)<br>
+                {<br>
+                    for(int j=i+1;j<n;j++)<br>
+                    {<br>
+                        if(nums[i]+nums[j]==sum)<br>
+                        {<br>
+                           ans=1; <br>
+                           break;<br>
+                        }<br>
+                        else<br>
+                        {<br>
+                            ans=0;<br>
+                        }<br>
+                    }<br>
+                    System.out.println(ans);<br> (if the sum exist in array then the ans will be 0 else ans will be 1 )<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>

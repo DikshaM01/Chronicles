@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>
+            CODE CHRONICLES
+        </title>
+    </head>
+    <link rel="stylesheet" href="styles.css">
+    <body>
+        <header>
+            <a href="#" class="code">CODE CHRONICLES</a>
+            <div class="menu-btn">
+
+            </div>
+            <div class="navigation">
+                 <div class="navigation-items">
+                 <a href="#">Home</a>
+                 <a href="#">Programming Languages</a>
+                 <a href="#">Coding Questions</a>
+                 <a href="#">Aptitude</a>
+                 <a href="#">Gate</a>
+                 <a href="#">Code Snippets</a>
+                 <a href="#">Contact</a>
+                 </div>
+            </div>
+        </header>
+        <section class="home">
+            <video class="video-slide" src="programming.mp4" autoplay muted loop></video>
+           
+            <div class="content">
+                <h1>CODE<br><span>CHRONICLES</span></h1>
+                <p>This website is for Computer science students who are passionate about coding but dont know how to start 
+                    and having difficult time in understanding the concept. </p>
+                    <a href="#">Read More</a>
+            </div>
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="slider-navigation">
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                </div>
+        </section>
+        <script type="text/javascript">
+            const menubtn=document.querySelector(".menu-btn");
+            const navigation=document.querySelector(".navigation");
+            menubtn.addEventListener("click",()=>{
+                menubtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });
+            const btns=document.querySelectorAll(".nav-btn");
+            const slides=document.querySelectorAll(".video-slides");
+            var sliderNav=function(manual){
+                btns.forEach((btn)=>{
+                    btn.classList.remove("active");
+                });
+                slides.forEach((slides)=>{
+                    slide.classList.remove("active");
+                });
+                btns[manual].classList.add("active");
+                slides[manual].classList.add("active");
+
+            }
+            btns.forEach((btn,i)=>{
+                btn.addEventListener("click",()=>{
+                    sliderNav(i);
+                });
+            });
+        </script>
+    </body>
+</html>
